@@ -53,7 +53,7 @@
 
 ;;;###autoload
 (defvar emacspeak-directory
-  (expand-file-name "../" (file-name-directory load-file-name))
+  (expand-file-name "../" (file-name-directory (file-truename load-file-name)))
   "emacspeak directory")
 
 ;;;###autoload
