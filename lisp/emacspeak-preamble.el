@@ -41,7 +41,7 @@
 
 (require 'cl-lib)
 (cl-declaim  (optimize  (safety 0) (speed 3)))
-(cl-pushnew (file-name-directory load-file-name) load-path :test #'string-equal)
+
 
 (eval-when-compile (require 'subr-x))
 (require 'advice)
@@ -55,11 +55,6 @@
 (defvar emacspeak-directory
   (expand-file-name "../" (file-name-directory (file-truename load-file-name)))
   "emacspeak directory")
-
-;;;###autoload
-(defvar emacspeak-lisp-directory
-  (expand-file-name  "lisp/" emacspeak-directory)
-  "Lisp directory.")
 
 ;;;###autoload
 (defvar emacspeak-sounds-directory
